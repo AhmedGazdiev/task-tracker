@@ -1,0 +1,21 @@
+<form class="form" [formGroup]="form" (submit)="submit()">
+  <h1>Register</h1>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input formControlName="email" matInput />
+    <mat-error> {{ getErrorMessage("email") }} </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input formControlName="username" matInput />
+    <mat-error> {{ getErrorMessage("username") }} </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input formControlName="password" matInput type="password" />
+    <mat-error> {{ getErrorMessage("password") }} </mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="!form.valid">
+    Register
+  </button>
+</form>

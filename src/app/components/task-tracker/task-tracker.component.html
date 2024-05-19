@@ -1,0 +1,11 @@
+<form [formGroup]="form" (submit)="submit()">
+  <mat-form-field>
+    <mat-label>Worker</mat-label>
+    <mat-select>
+      <mat-option value="value">title</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="!form.valid">
+    Add
+  </button>
+</form>
